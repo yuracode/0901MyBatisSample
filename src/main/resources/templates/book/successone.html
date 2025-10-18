@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>操作結果</title>
+</head>
+<body>
+	<h1 th:text="${message}">メッセージ</h1>
+	<!-- 書籍一覧表示の場合 -->
+	<div th:if="${book}" border="1">
+			<p><strong>ID:</strong>
+				<span th:text="${book.id}">ID</span>
+			</p>
+			<p>
+				<strong>タイトル:</strong>
+				<span th:text="${book.title}">タイトル</span>
+			</p>
+			<p>
+				<strong>著者:</strong>
+				<span th:text="${book.author}">著者</span>
+			</p>
+
+	</div>
+	<a th:href="@{/}">メニューに戻る</a>
+</body>
+</html>
