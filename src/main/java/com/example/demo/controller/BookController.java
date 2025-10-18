@@ -48,7 +48,7 @@ public class BookController {
 		book.setAuthor("山田太郎");
 		bookMapper.insertBook(book);
 		model.addAttribute("message", "登録成功");
-		return "book/success";
+		return "book/successone";
 	}
 
 	// 特定のIDを持つ書籍を更新する
@@ -61,7 +61,7 @@ public class BookController {
 		book.setAuthor("更新太郎");
 		bookMapper.updateBook(book);
 		model.addAttribute("message", "更新成功");
-		return "book/success";
+		return "book/successone";
 	}
 
 	// 特定のIDを持つ書籍を削除する
@@ -69,6 +69,6 @@ public class BookController {
 	public String deleteBook(@PathVariable int id, Model model) {
 		bookMapper.deleteBookById(id);
 		model.addAttribute("message", "削除成功");
-		return "book/success";
+		return "book/successone";
 	}
 }
